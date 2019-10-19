@@ -59,10 +59,10 @@ if( A )
     
         //dell
         board_hole( 0, 0, front_z+panel_thick);
-        lcd_window( 10-diff_w+2/2+watch_w*0, -diff_h+2/2 );
-        lcd_window( 10-diff_w+2/2+watch_w*1, -diff_h+2/2 );
-        lcd_window( 10-diff_w+2/2+watch_w*2, -diff_h+2/2 );
-        lcd_window( 10-diff_w+2/2+watch_w*3, -diff_h+2/2 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*0, -diff_h+2/2 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*1, -diff_h+2/2 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*2, -diff_h+2/2 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*3, -diff_h+2/2 );
         
         deg = 30;
         translate( [0-gap1, -5, -5*tan(deg)] )
@@ -74,7 +74,7 @@ if( A )
 
 if( B )
 {
-translate( [0, 50, 0] )
+translate( [0, 30, 0] )
 //translate( [0, 0, front_z+panel_thick] )
 {
     difference()
@@ -86,9 +86,9 @@ translate( [0, 50, 0] )
                 //base
                 cube( [front_x, front_y, rear_z] );
                 //stand
-                translate( [front_x/3, front_y/2-10/2, 0] )
+                translate( [front_x/3-3/2, front_y/2-10/2, 0] )
                 cube( [3, 10, 20] );
-                translate( [front_x/3*2, front_y/2-10/2, 0] )
+                translate( [front_x/3*2-3/2, front_y/2-10/2, 0] )
                 cube( [3, 10, 20] );
             }
         }
