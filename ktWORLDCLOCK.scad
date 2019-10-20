@@ -14,7 +14,7 @@ lcd_h = 15.00;
 lcd_slope = 0.775;
 watch_w = 26.7;
 watch_h = 27.0;
-watch_d = 7.0;
+watch_d = 7.0+1.0;
 diff_w = -(watch_w-lcd_w)/2;
 diff_h = -(watch_h-lcd_h)/2+0.5;
 
@@ -59,10 +59,10 @@ if( A )
     
         //dell
         board_hole( 0, 0, front_z+panel_thick);
-        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*0, -diff_h+2/2 );
-        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*1, -diff_h+2/2 );
-        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*2, -diff_h+2/2 );
-        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*3, -diff_h+2/2 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*0, -diff_h+2/2+1 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*1, -diff_h+2/2+1 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*2, -diff_h+2/2+1 );
+        lcd_window( 10-diff_w+2/2+(watch_w+2/2)*3, -diff_h+2/2+1 );
         
         deg = 30;
         translate( [0-gap1, -5, -5*tan(deg)] )
